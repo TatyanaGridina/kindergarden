@@ -11,7 +11,7 @@ class ErrorBottomSheet extends StatelessWidget {
     return Container(
       height: 300,
       padding: const EdgeInsets.all(MyPaddings.large),
-      color: MyColors.backgroundSecondary,
+      color: MyColors.backgroundPrimary,
       child: SingleChildScrollView(
         child: Center(
           child: Text(message ?? '', style: MyTextStyles.mediumSecondary),

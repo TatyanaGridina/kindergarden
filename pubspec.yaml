@@ -12,6 +12,7 @@ dependencies:
   flutter:
     sdk: flutter
   cupertino_icons: ^1.0.2
+  google_fonts: ^3.0.1
 
   flutter_localizations:
     sdk: flutter
@@ -39,6 +40,15 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+
+  fonts:
+    - family: Caveat
+      fonts:
+        - asset: lib/features/app/presentation/ui/fonts/Caveat-Bold.ttf
+        - asset: lib/features/app/presentation/ui/fonts/Caveat-Medium.ttf
+        - asset: lib/features/app/presentation/ui/fonts/Caveat-Regular.ttf
+        - asset: lib/features/app/presentation/ui/fonts/Caveat-SemiBold.ttf
+        - asset: lib/features/app/presentation/ui/fonts/Caveat-VariableFont_wght.ttf
   assets:
     - lib/features/app/presentation/ui/assets/
     - lib/config/env/development/
