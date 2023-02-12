@@ -1,6 +1,6 @@
 import 'package:kindergarden/features/app/data/providers/dio_provider.dart';
 import 'package:kindergarden/features/login/usecases/login_usecase.dart';
-import 'package:kindergarden/features/router/usecases/go_off_action.dart';
+import 'package:kindergarden/features/router/usecases/go_off_usecase.dart';
 import 'package:kindergarden/features/router/usecases/go_to_usecase.dart';
 import 'package:kindergarden/features/state/usecases/set_garden_state_usecase.dart';
 import 'package:kindergarden/features/state/usecases/set_router_state_usecase.dart';
