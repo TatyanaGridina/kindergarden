@@ -5,11 +5,11 @@ import 'package:get/get.dart';
 import 'package:kindergarden/presentation/app/ui/styles.dart';
 import 'package:kindergarden/presentation/app/ui/widgets/my_button.dart';
 import 'package:kindergarden/presentation/app/ui/widgets/my_text_field.dart';
-import 'package:kindergarden/presentation/login/actions/on_change_stage_widget.dart';
-import 'package:kindergarden/presentation/login/actions/on_change_user_role.dart';
-import 'package:kindergarden/presentation/login/actions/on_input_email.dart';
-import 'package:kindergarden/presentation/login/actions/on_input_garden.dart';
-import 'package:kindergarden/presentation/login/actions/on_input_password.dart';
+import 'package:kindergarden/presentation/login/controller/on_change_stage_widget.dart';
+import 'package:kindergarden/presentation/login/controller/on_change_user_role.dart';
+import 'package:kindergarden/presentation/login/controller/on_input_email.dart';
+import 'package:kindergarden/presentation/login/controller/on_input_garden.dart';
+import 'package:kindergarden/presentation/login/controller/on_input_password.dart';
 import '../controller/login_controller.dart';
 
 class LoginScreen extends GetView<LoginController> {
