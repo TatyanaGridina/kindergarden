@@ -1,5 +1,5 @@
 import 'package:get/get.dart';
-import 'package:kindergarden/features/_state/state/_state.dart';
+import 'package:kindergarden/state/state/state.dart';
 
 part 'router_view_state.m.dart';
 

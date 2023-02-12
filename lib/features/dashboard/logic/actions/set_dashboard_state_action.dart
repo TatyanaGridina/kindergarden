@@ -1,7 +1,7 @@
-import 'package:kindergarden/features/_state/logic/actions/set_state_action.dart';
-import 'package:kindergarden/features/_state/action.dart';
-import 'package:kindergarden/features/_state/state/_state.dart';
 import 'package:get/get.dart';
+import 'package:kindergarden/state/action.dart';
+import 'package:kindergarden/state/logic/actions/set_state_action.dart';
+import 'package:kindergarden/state/state/state.dart';
 
 class SetDashboardStateAction extends Action {
   SetDashboardStateAction(
@@ -23,13 +23,13 @@ class SetDashboardStateAction extends Action {
   }
 
   saveTitleToState(String value) async {
-    if (state.dashboard.title == value) return;
-
-    await setState(
-      state.copyWith(
-        action: runtimeType,
-        dashboard: state.dashboard.copyWith(title: value),
-      ),
-    );
+    // if (state.dashboard.title == value) return;
+    //
+    // await setState(
+    //   state.copyWith(
+    //     action: runtimeType,
+    //     dashboard: state.dashboard.copyWith(title: value),
+    //   ),
+    // );
   }
 }

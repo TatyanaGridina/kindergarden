@@ -1,4 +1,4 @@
-import 'package:kindergarden/features/app/models/BackendSettings.dart';
+import 'package:kindergarden/entities/backend_settings.dart';
 import 'package:kindergarden/features/dashboard/data/datasources/dashboard_datasource.dart';
 import 'package:kindergarden/features/dashboard/data/models/dashboard_response.dart';
 import 'package:kindergarden/features/dashboard/logic/repositories/dashboard_repository.dart';

@@ -1,6 +1,6 @@
 import 'dart:convert';
 import 'package:kindergarden/data/providers/dio_provider.dart';
-import 'package:kindergarden/features/app/models/BackendSettings.dart';
+import 'package:kindergarden/entities/backend_settings.dart';
 import 'package:kindergarden/features/app/models/_models.dart';
 import 'package:dio/dio.dart';
 import 'package:kindergarden/features/dashboard/data/models/dashboard_response.dart';

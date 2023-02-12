@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:kindergarden/features/_state/state/_state.dart';
 import 'package:kindergarden/features/app/models/_models.dart';
+import 'package:kindergarden/state/state/state.dart';
 
 part 'app_view_state.m.dart';
 

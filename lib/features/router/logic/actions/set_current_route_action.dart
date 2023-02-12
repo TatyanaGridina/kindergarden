@@ -1,9 +1,9 @@
-import 'package:kindergarden/features/_state/logic/actions/set_state_action.dart';
-import 'package:kindergarden/features/_state/action.dart';
-import 'package:kindergarden/features/_state/state/_state.dart';
 import 'package:kindergarden/features/router/presentation/ui/routes.dart';
 import 'package:kindergarden/features/app/models/_models.dart';
 import 'package:get/get.dart';
+import 'package:kindergarden/state/action.dart';
+import 'package:kindergarden/state/logic/actions/set_state_action.dart';
+import 'package:kindergarden/state/state/state.dart';
 
 class SetCurrentRouteAction extends Action {
   SetCurrentRouteAction(Rx<State> state, SetStateAction setAppStateAction) : super(state, setAppStateAction);

@@ -1,7 +1,7 @@
-import 'package:kindergarden/features/_state/logic/actions/set_state_action.dart';
-import 'package:kindergarden/features/_state/action.dart';
-import 'package:kindergarden/features/_state/state/_state.dart';
 import 'package:get/get.dart';
+import 'package:kindergarden/state/action.dart';
+import 'package:kindergarden/state/logic/actions/set_state_action.dart';
+import 'package:kindergarden/state/state/state.dart';
 
 class GoOffAction extends Action {
   GoOffAction(Rx<State> state, SetStateAction setAppStateAction) : super(state, setAppStateAction);
