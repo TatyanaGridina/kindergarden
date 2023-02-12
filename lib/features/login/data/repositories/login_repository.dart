@@ -1,7 +1,7 @@
 import 'package:kindergarden/entities/backend_settings.dart';
 import 'package:kindergarden/features/login/data/datasources/login_datasource.dart';
 import 'package:kindergarden/features/login/data/models/backend_response.dart';
-import 'package:kindergarden/features/login/logic/repositories/login_repository.dart';
+import 'package:kindergarden/features/login/interfaces/login_repository.dart';
 
 class LoginRepository extends ILoginRepository {
   final LoginDatasource _loginDatasource;

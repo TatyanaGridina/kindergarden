@@ -1,6 +1,6 @@
 import 'package:kindergarden/config/config.dart';
 import 'package:kindergarden/dependencies.dart';
-import 'package:kindergarden/features/app/presentation/ui/app.dart';
+import 'package:kindergarden/presentation/app/ui/app.dart';
 import 'package:flutter/material.dart';
 
 

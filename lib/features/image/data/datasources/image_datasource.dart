@@ -3,25 +3,25 @@ import 'package:kindergarden/features/app/data/providers/dio_provider.dart';
 import 'package:kindergarden/entities/backend_settings.dart';
 import 'package:kindergarden/entities/result.dart';
 import 'package:dio/dio.dart';
-import 'package:kindergarden/features/login/data/models/backend_response.dart';
+import 'package:kindergarden/features/image/data/models/image_response.dart';
 import 'package:retrofit/dio.dart';
 import 'package:retrofit/http.dart';
 
-part 'login_datasource.g.dart';
+part 'image_datasource.g.dart';
 
-class LoginDatasource {
+class ImageDatasource {
   final DioProvider _dioProvider;
 
-  LoginDatasource(this._dioProvider);
+  ImageDatasource(this._dioProvider);
 
-  Future<Result<BackendResponse>> call({required BackendSettings settings}) async {
+  Future<Result<ImageResponse>> call({required BackendSettings settings}) async {
     try {
       final baseUrl = settings.url;
       final auth = 'Basic ${base64Encode(utf8.encode('${settings.login}:${settings.password}'))}';
-      final HttpResponse<BackendResponse> response =
-          await LoginDao(_dioProvider.dio, baseUrl: baseUrl).invoke(auth: auth);
+      final HttpResponse<ImageResponse> response =
+          await ImageDao(_dioProvider.dio, baseUrl: baseUrl).invoke(auth: auth);
 
-      Result<BackendResponse> result = response.toResult<BackendResponse>();
+      Result<ImageResponse> result = response.toResult<ImageResponse>();
       if (result is Ok) {
         return Ok(result.data!);
       } else {
@@ -34,11 +34,11 @@ class LoginDatasource {
 }
 
 @RestApi()
-abstract class LoginDao {
-  factory LoginDao(Dio dio, {String baseUrl}) = _LoginDao;
+abstract class ImageDao {
+  factory ImageDao(Dio dio, {String baseUrl}) = _ImageDao;
 
   @POST("/getActiveUsers")
-  Future<HttpResponse<BackendResponse>> invoke({
+  Future<HttpResponse<ImageResponse>> invoke({
     @Header('Authorization') required String auth,
   });
 }

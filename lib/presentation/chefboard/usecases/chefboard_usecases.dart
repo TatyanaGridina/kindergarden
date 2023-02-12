@@ -1,0 +1,6 @@
+
+class ChefboardUsecases {
+
+  ChefboardUsecases(
+  );
+}

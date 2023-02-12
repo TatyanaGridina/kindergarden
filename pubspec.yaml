@@ -44,13 +44,13 @@ flutter:
   fonts:
     - family: Caveat
       fonts:
-        - asset: lib/features/app/presentation/ui/fonts/Caveat-Bold.ttf
-        - asset: lib/features/app/presentation/ui/fonts/Caveat-Medium.ttf
-        - asset: lib/features/app/presentation/ui/fonts/Caveat-Regular.ttf
-        - asset: lib/features/app/presentation/ui/fonts/Caveat-SemiBold.ttf
-        - asset: lib/features/app/presentation/ui/fonts/Caveat-VariableFont_wght.ttf
+        - asset: lib/presentation/app/ui/fonts/Caveat-Bold.ttf
+        - asset: lib/presentation/app/ui/fonts/Caveat-Medium.ttf
+        - asset: lib/presentation/app/ui/fonts/Caveat-Regular.ttf
+        - asset: lib/presentation/app/ui/fonts/Caveat-SemiBold.ttf
+        - asset: lib/presentation/app/ui/fonts/Caveat-VariableFont_wght.ttf
   assets:
-    - lib/features/app/presentation/ui/assets/
+    - lib/presentation/app/ui/assets/
     - lib/config/env/development/
     - lib/config/env/production/
 
