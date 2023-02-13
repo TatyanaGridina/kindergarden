@@ -1,5 +1,5 @@
-import 'package:kindergarden/features/router/usecases/go_off_usecase.dart';
-import 'package:kindergarden/features/state/usecases/get_state_usecase.dart';
+import 'package:kindergarden/usecases/router/go_off_usecase.dart';
+import 'package:kindergarden/usecases/state/get_state_usecase.dart';
 
 class AppUsecases {
   final GetStateUsecase getState;
