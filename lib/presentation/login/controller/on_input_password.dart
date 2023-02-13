@@ -7,6 +7,7 @@ extension OnInputPassword on LoginController {
     final validated = validatePassword(passwordTextController.text);
     if (!validated) {
       showError(validated);
+      return;
     }
 
     usecases.goOff(route: chefboardRoute);

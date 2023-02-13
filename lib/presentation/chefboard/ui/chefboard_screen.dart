@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:kindergarden/presentation/app/ui/styles.dart';
 
-class ChefboardScreen extends StatelessWidget {
+class ChefboardScreen extends GetView {
   const ChefboardScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('УВІЙТИ'),
+        title: Obx(() => Text(controller.state.gardenName)),
         centerTitle: true,
         flexibleSpace: Container(
           decoration: const BoxDecoration(
