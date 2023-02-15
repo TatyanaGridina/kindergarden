@@ -11,9 +11,9 @@ abstract class Result<T> {
   @override
   String toString() {
     if (isOk) {
-      return 'Result{data: $data}';
+      return 'Ok{data: $data}';
     } else {
-      return 'Result{error: $error}';
+      return error?.message ?? '';
     }
   }
 
@@ -32,6 +32,10 @@ class Ok<T> extends Result<T> {
 
 class Err<T> extends Result<T> {
   Err(Error? error) : super._(null, error ?? Error(message: 'null'));
+
+  factory Err.message(String message) {
+    return Err(Error(message: message));
+  }
 }
 
 class Error {

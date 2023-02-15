@@ -27,7 +27,7 @@ abstract class Usecase {
     }
   }
 
-  onErrorUsecaseHandler(e) {
+  Error onErrorUsecaseHandler(e) {
     Error error;
     if (e is Error) {
       error = e;
@@ -40,5 +40,7 @@ abstract class Usecase {
       print('[ERROR] $_usecase ${error.message}');
     }
     setState(_state.value.copyWith(usecase: _usecase, error: error));
+
+    return error;
   }
 }

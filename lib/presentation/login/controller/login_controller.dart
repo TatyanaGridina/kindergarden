@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:kindergarden/entities/result.dart';
 import 'package:kindergarden/entities/user.dart';
 import 'package:kindergarden/presentation/login/state/login_view_state.dart';
 import 'package:kindergarden/presentation/login/usecases/login_usecases.dart';
@@ -26,33 +27,32 @@ class LoginController extends LoginGetxController {
     super.onClose();
   }
 
-  validateEmail(String text) {
+  Result<bool> validateEmail(String text) {
     if (text.isEmpty) {
-      return 'ВВЕДІТЬ E-MAIL.';
+      return Err.message('ВВЕДІТЬ E-MAIL.');
     }
     if (!(text.contains('@') && text.contains('.'))) {
-      return 'НЕ ВІРНИЙ ФОРМАТ E-MAIL.';
+      return Err.message('НЕ ВІРНИЙ ФОРМАТ E-MAIL.');
     }
-    return true;
+    return const Ok(true);
   }
 
-  validateGarden(String text) {
+  Result<bool> validateGarden(String text) {
     if (text.isEmpty) {
-      return 'ВВЕДІТЬ НАЗВУ САДОЧКУ.';
+      return Err.message('ВВЕДІТЬ НАЗВУ САДОЧКУ.');
     }
-    return true;
+    return const Ok(true);
   }
 
-  validatePassword(String text) {
+  Result<bool> validatePassword(String text) {
     if (text.isEmpty) {
-      return 'ВВЕДІТЬ ПАРОЛЬ.';
+      return Err.message('ВВЕДІТЬ ПАРОЛЬ.');
     }
 
     if (text.length != 4 || !text.isNum) {
-      return 'НЕ ВІРНИЙ ФОРМАТ. ПАРОЛЬ МІСТИТЬ 4 ЦИФРИ.';
+      return Err.message('НЕ ВІРНИЙ ФОРМАТ. ПАРОЛЬ МІСТИТЬ 4 ЦИФРИ.');
     }
-
-    return true;
+    return const Ok(true);
   }
 }
 

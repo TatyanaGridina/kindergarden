@@ -4,9 +4,9 @@ import 'package:kindergarden/presentation/router/ui/routes.dart';
 
 extension OnInputPassword on LoginController {
   onInputPassword() {
-    final validated = validatePassword(passwordTextController.text);
-    if (!validated) {
-      showError(validated);
+    final valid = validatePassword(passwordTextController.text);
+    if (valid.isErr) {
+      showError(valid.toString());
       return;
     }
 

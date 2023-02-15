@@ -13,7 +13,7 @@ Widget build(BuildContext context) {
     child: ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-          backgroundColor: MyColors.backgroundButton,
+          // backgroundColor: MyColors.backgroundButton,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30)),
           padding: const EdgeInsets.symmetric(

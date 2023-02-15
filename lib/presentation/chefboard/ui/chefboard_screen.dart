@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kindergarden/presentation/app/ui/styles.dart';
+import 'package:kindergarden/presentation/chefboard/controller/chefboard_controller.dart';
 
-class ChefboardScreen extends GetView {
+class ChefboardScreen extends GetView<ChefboardController> {
   const ChefboardScreen({Key? key}) : super(key: key);
 
   @override

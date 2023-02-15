@@ -4,9 +4,9 @@ import 'package:kindergarden/presentation/login/controller/login_controller.dart
 
 extension OnInputEmail on LoginController {
   onInputEmail() {
-    final validated = validateEmail(emailTextController.text);
-    if (!validated) {
-      showError(validated);
+    final valid = validateEmail(emailTextController.text);
+    if (valid.isErr) {
+      showError(valid.toString());
       return;
     }
 
