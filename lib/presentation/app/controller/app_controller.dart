@@ -12,6 +12,6 @@ class AppController extends AppGetxController {
   onReady() {
     super.onReady();
     usecases.getState();
-    usecases.goOff(route: loginRoute);
+    usecases.goOff(route: reportsRoute);
   }
 }

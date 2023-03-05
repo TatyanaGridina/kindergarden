@@ -13,13 +13,13 @@ Widget build(BuildContext context) {
     child: ElevatedButton(
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-          // backgroundColor: MyColors.backgroundButton,
+          backgroundColor: MyColors.accentColor,
           shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30)),
           padding: const EdgeInsets.symmetric(
               vertical: MyPaddings.medium)),
       child: Text(text,
-          style: MyTextStyles.largeSecondaryBold),
+          style: MyTextStyles.largeSecondary),
     ),
   );
 }

@@ -12,13 +12,13 @@ class SignupUsecase extends Usecase {
   ) : super(state, setStateUsecase);
 
   Future<Result<bool>> call({
-    required String userName,
+    required String chefName,
     required String userEmail,
     required String gardenName,
   }) async {
     try {
       onStartUsecaseHandler(runtimeType);
-      setState.user(usecase: runtimeType, name: userName, email: userEmail, role: UserRole.chef, token: "12345");
+      setState.user(usecase: runtimeType, name: chefName, email: userEmail, role: UserRole.chef, token: "12345");
       setState.garden(usecase: runtimeType, name: gardenName);
     } catch (e) {
       return Err(onErrorUsecaseHandler(e));

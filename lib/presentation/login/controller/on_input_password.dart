@@ -10,6 +10,6 @@ extension OnInputPassword on LoginController {
       return;
     }
 
-    usecases.goOff(route: chefboardRoute);
+    usecases.goOff(route: reportsRoute);
   }
 }

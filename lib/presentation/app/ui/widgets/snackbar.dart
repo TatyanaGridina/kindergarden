@@ -7,7 +7,7 @@ class ErrorSnackBar extends GetSnackBar {
       : super(
           messageText: Text(message, style: MyTextStyles.mediumPrimaryBold.copyWith(color: MyColors.errorSnackBarColor),),
           icon: const Icon(Icons.cancel, color: MyColors.errorSnackBarColor, size: 36),
-          duration: const Duration(seconds: 10),
+          duration: const Duration(seconds: 5),
           backgroundColor: MyColors.backgroundPrimary,
           snackPosition: SnackPosition.TOP,
         );

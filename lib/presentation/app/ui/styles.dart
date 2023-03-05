@@ -4,22 +4,17 @@ const kAssetPath = 'lib/ui/assets';
 
 class MyColors {
   static const Color backgroundPrimary = Color(0xFFFEFEFE);
-  static const Color backgroundAppBarStartColor = Color(0xFF65FDF0);
-  static const Color backgroundAppBarEndColor = Color(0xFF1D6FA3);
-  static const Color accentColor = Color(0xFF10c3d3);
-  //background-image: linear-gradient( 135deg, #65FDF0 10%, #1D6FA3 100%);
-  static const Color backgroundButton = Color(0xFFfebd03);
-  static const Color iconColor = Color(0xFFa2d87b);
-  static const Color messageSnackBarColor = Color(0xff55a51b);
-  static const Color errorSnackBarColor = Colors.redAccent;
-  //background-image: linear-gradient( 135deg, #70F570 10%, #49C628 100%);
+  static const Color primaryColor = Color(0xFF243763);
+  static const Color accentColor = Color(0xFFFF6E31);
+  static const Color secondaryColor = Color(0xFFAD8E70);
+  static const Color backgroundSecondary = Color(0xFFFFEBB7);
+
   static const Color textInactive = Color(0xFF5A5A5A);
   static const Color textPrimary = Color(0xFF000000);
   static const Color textSecondary = Color(0xFFFEFEFE);
 
-
-  static const Color textSelected = Color(0xFF05A6EE);
-  static const Color divider = Color(0xFF313337);
+  static const Color messageSnackBarColor = Color(0xff55a51b);
+  static const Color errorSnackBarColor = Color(0xffC85C5C);
 }
 
 class MyPaddings {

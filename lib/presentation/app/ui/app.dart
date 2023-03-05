@@ -6,6 +6,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:responsive_framework/responsive_framework.dart';
+
 class App extends StatelessWidget {
   const App({Key? key}) : super(key: key);
 
@@ -15,7 +16,7 @@ class App extends StatelessWidget {
       localizationsDelegates: GlobalMaterialLocalizations.delegates,
       supportedLocales: const [
         Locale('en', 'US'), // English
-        Locale('ru', 'RU'), // Thai
+        Locale('uk', 'UK'), // Ukraine
       ],
       enableLog: false,
       popGesture: false,
@@ -45,30 +46,33 @@ class App extends StatelessWidget {
         ClampingScrollWrapper.builder(context, widget!),
       ),
       theme: ThemeData(
-        // указываем primaryColor и его оттенки
+          dialogTheme: const DialogTheme(
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.all(Radius.circular(30)))),
+        primarySwatch: Colors.orange,
+        inputDecorationTheme: const InputDecorationTheme(
+            filled: true,
+            fillColor: MyColors.backgroundPrimary,
+            labelStyle: MyTextStyles.largeInactive,
+          floatingLabelStyle: MyTextStyles.largeInactive
+        ),
           primaryColor: MyColors.backgroundPrimary,
-          //primaryColorLight: Colors.purple[300],
-          //primaryColorDark: Colors.purple[800],
-          // также указываем accentColor
-          accentColor: MyColors.accentColor,
-          // настройка Theme для AppBar
+          accentColor: MyColors.primaryColor,
           appBarTheme: AppBarTheme(
+           foregroundColor: MyColors.textSecondary,
             shadowColor: Colors.grey.withOpacity(0.8),
-            //backgroundColor: MyColors.backgroundAppBar,
             elevation: 10,
           ),
-        tabBarTheme: TabBarTheme(
-          labelStyle: MyTextStyles.largePrimaryBold.copyWith(fontFamily: 'Caveat'),
-          labelColor: MyColors.textPrimary,
-          unselectedLabelStyle: MyTextStyles.largeInactiveBold.copyWith(fontFamily: 'Caveat'),
-        ),
-          // настройка Theme для Text
-          textTheme: const TextTheme(
-              headline6: MyTextStyles.largeSecondaryBold
+          tabBarTheme: TabBarTheme(
+            labelStyle:
+                MyTextStyles.largePrimary.copyWith(fontFamily: 'Caveat'),
+            labelColor: MyColors.textPrimary,
+            unselectedLabelStyle:
+                MyTextStyles.largeInactive.copyWith(fontFamily: 'Caveat'),
           ),
-          // указываем наш шрифт для всего приложения
-          fontFamily: "Caveat"
-      ),
+          textTheme:
+              const TextTheme(headline6: MyTextStyles.largeSecondaryBold),
+          fontFamily: "Caveat"),
       defaultTransition: Transition.fadeIn,
     );
   }

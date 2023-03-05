@@ -14,6 +14,7 @@ class LoginController extends LoginGetxController {
   final emailTextController = TextEditingController();
   final passwordTextController = TextEditingController();
   final gardenTextController = TextEditingController();
+  final chefNameTextController = TextEditingController();
 
   final Rx<LoginStages> loginStage = LoginStages.inputEmail.obs;
   final Rx<LoginStages> loginStageStack = LoginStages.inputEmail.obs;
@@ -24,6 +25,7 @@ class LoginController extends LoginGetxController {
     emailTextController.dispose();
     passwordTextController.dispose();
     gardenTextController.dispose();
+    chefNameTextController.dispose();
     super.onClose();
   }
 
@@ -40,6 +42,13 @@ class LoginController extends LoginGetxController {
   Result<bool> validateGarden(String text) {
     if (text.isEmpty) {
       return Err.message('ВВЕДІТЬ НАЗВУ САДОЧКУ.');
+    }
+    return const Ok(true);
+  }
+
+  Result<bool> validateChefName(String text) {
+    if (text.isEmpty) {
+      return Err.message('ВВЕДІТЬ ВАШЕ ІМʼЯ.');
     }
     return const Ok(true);
   }

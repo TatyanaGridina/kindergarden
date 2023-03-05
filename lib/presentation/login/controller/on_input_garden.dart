@@ -3,16 +3,23 @@ import 'package:kindergarden/presentation/login/controller/login_controller.dart
 
 extension OnInputGarden on LoginController {
   onInputGarden() async {
-    final valid = validateGarden(gardenTextController.text);
-    if (valid.isErr) {
-      showError(valid.toString());
+    final validGarden = validateGarden(gardenTextController.text);
+    final validChefName = validateChefName(chefNameTextController.text);
+
+    if (validChefName.isErr) {
+      showError(validChefName.toString());
+      return;
+    }
+
+    if (validGarden.isErr) {
+      showError(validGarden.toString());
       return;
     }
 
     final userEmail = emailTextController.text;
-    const userName = "UNDEFINED";
+    final chefName = chefNameTextController.text;
     final gardenName = gardenTextController.text;
-    final result = await usecases.signup(userEmail: userEmail, userName: userName, gardenName: gardenName);
+    final result = await usecases.signup(userEmail: userEmail, chefName: chefName, gardenName: gardenName);
 
     if (result.isOk) {
       loginStage.value = LoginStages.inputPassword;
